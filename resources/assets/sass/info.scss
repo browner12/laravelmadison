@@ -1,0 +1,60 @@
+.info {
+
+    //general
+    background-color: #f0523f;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 2em 0;
+
+    //links
+    a {
+        color: #fff;
+    }
+
+    //branding
+    .branding {
+
+        //general
+        display: flex;
+        margin-bottom: 1em;
+
+        //logo
+        .logo {
+            background-image: url('/images/white-logo.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            height: 50px;
+            margin-right: 1em;
+            width: 50px;
+        }
+
+        //company
+        .company {
+            font-size: 1.7em;
+        }
+
+    }
+
+    //blurb
+    .blurb {
+        line-height: 1.8;
+        margin-bottom: 1em;
+    }
+
+    //links
+    .links {
+
+        //general
+        line-height: 1.8;
+
+
+        //header
+        .header {
+            color: darken(#f0523f, 20);
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+    }
+}
