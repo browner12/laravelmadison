@@ -148,6 +148,7 @@
                 <div class="header">Contact Us</div>
                 <div class="text-nowrap"><i class="fa fa-fw fa-map-marker"></i> <a href="https://google.com/maps/place/Madison+WI" target="_blank">Madison WI</a></div>
                 <div class="text-nowrap"><i class="fa fa-fw fa-envelope"></i> <a href="mailto:info@laravelmadison.com" target="_blank">info@laravelmadison.com</a></div>
+                <div class="text-nowrap"><i class="fa fa-fw fa-github"></i> <a href="https://github.com/laravelmadison" target="_blank">/laravelmadison</a></div>
             </div>
 
         </div>
