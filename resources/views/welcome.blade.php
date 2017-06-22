@@ -13,9 +13,6 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-<!-- Fontawesome -->
-<script src="https://use.fontawesome.com/9323a85e58.js"></script>
-
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -43,10 +40,6 @@
         justify-content: center;
     }
 
-    .position-ref {
-        position: relative;
-    }
-
     .content {
         text-align: center;
     }
@@ -65,10 +58,6 @@
         text-transform: uppercase;
     }
 
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-
     footer {
         background-color: #444;
         color: #fff;
@@ -76,51 +65,66 @@
         padding: 2em 0;
     }
 
+    .even {
+        background-color: #fff;
+    }
+
+    .odd {
+        background-color: #ddd;
+    }
+
 </style>
 </head>
 <body>
 
-<div class="flex-center position-ref full-height">
+<div class="flex-center full-height">
     <div class="content">
 
         <div>
             <img src="/images/apple.png" />
         </div>
 
-        <div class="title m-b-md">Laravel Madison</div>
+        <div class="title mb-4">Laravel Madison</div>
 
         <div class="links">
-            <a href="#aboutUs">About Us</a>
+            <a href="#about">About</a>
             <a href="#upcoming">Upcoming</a>
-            <a href="#locationTime">Location / Time</a>
+            <a href="#location">Location</a>
             <a href="#sponsors">Sponsors</a>
         </div>
 
     </div>
 </div>
 
-<section id="aboutUs" class="flex-center position-ref full-height" style="background-color: #ddd; ">
+<section id="about" class="flex-center full-height odd">
+    <div>
+        <div class="title mb-4">About</div>
+        <div>This is the about us information.</div>
+    </div>
+</section>
 
-    <div class="title m-b-md">About Us</div>
+<section id="upcoming" class="flex-center full-height even">
+
+    <div class="title mb-4">Upcoming</div>
 
 </section>
 
-<section id="upcoming" class="flex-center position-ref full-height" style="background-color: #fff; ">
-
-    <div class="title m-b-md">Upcoming</div>
-
+<section id="location" class="full-height odd">
+    <div class="text-center">
+        <div class="title mb-4">Location</div>
+        <div>9 Odana Court, Madison WI 53719</div>
+        <div id="map" style="height: 70vh; width: 80%; "></div>
+    </div>
 </section>
 
-<section id="locationTime" class="flex-center position-ref full-height" style="background-color: #ddd; ">
+<section id="sponsors" class="flex-center full-height even">
+    <div>
+        <div class="title mb-4">Sponsors</div>
 
-    <div class="title m-b-md">Location / Time</div>
-
-</section>
-
-<section id="sponsors" class="flex-center position-ref full-height" style="background-color: #fff; ">
-
-    <div class="title m-b-md">Sponsors</div>
-
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">Kennedy Communications</div>
+        </div>
+    </div>
 </section>
 
 <div class="info">
@@ -137,7 +141,7 @@
 
             <div class="hidden-md-down col-lg-1"></div>
 
-            <div class="col-12 col-sm-8 col-lg-4 links mb-2 mb-sm-0">
+            <div class="col-12 col-sm-8 col-lg-4 links mb-4 mb-sm-0">
                 <div class="header">Proudly Built With</div>
                 <div><a href="https://forge.laravel.com" target="_blank">Forge</a></div>
                 <div><a href="https://envoyer.io" target="_blank">Envoyer</a></div>
@@ -159,9 +163,32 @@
     Copyright &copy; {{ date('Y') }} Laravel Madison
 </footer>
 
+<script>
+    var map;
+    function initMap() {
+
+        var myLatLng = {lat: 43.0550959, lng: -89.4904666};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Laravel Madison'
+        });
+    }
+</script>
+
+
+<!--scripts-->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/9323a85e58.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcHeTYValQW53lKB4kZIc6wV4gBBttjew&callback=initMap" async defer></script>
 
 </body>
 </html>
