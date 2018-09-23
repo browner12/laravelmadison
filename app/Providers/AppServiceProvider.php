@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->share('_name', 'Laravel Madison');
+        view()->share('_description', 'Laravel Madison.');
+        view()->share('_keywords', 'laravel, madison');
     }
 
     /**
